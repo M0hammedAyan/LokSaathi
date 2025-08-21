@@ -69,5 +69,4 @@ For students
 
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/yourusername/loksaathi.git
-   cd loksaathi
+   git clone https://github.com/M0hammedAyan/LokSaathi.git
