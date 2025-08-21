@@ -1,28 +1,25 @@
+// src/pages/ShikshaMitr.jsx
 import React from "react";
-import ChatInput from "../components/ChatInput";
-import SuggestionsBox from "../components/SuggestionsBox";
-import logo from "../assets/logo.png";
+import ChatUI from "@/components/ChatUI";
+import SuggestionsBox from "@/components/SuggestionsBox";
+import logo from "@/assets/logo.png";
 
-function SehaliAI() {
+export default function ShikshaMitr() {
   return (
     <div className="page-container text-center">
-      <img src={logo} alt="Shiksha Mitr logo" className="mx-auto w-20 h-20 mb-4" />
-      <h1 className="text-2xl font-bold mb-2">Shiksha Mitr</h1>
-      <p className="mb-4">Learning, made simple</p>
+      {/* Header */}
+      <img src={logo} alt="ShikshaMitr Logo" className="mx-auto w-20 h-20 mb-4" />
+      <h1 className="text-2xl font-bold mb-2">ShikshaMitr</h1>
+      <p className="mb-4">Smart assistant for students and learners</p>
 
-      <ChatInput />
+      {/* Suggestions */}
+      <div className="mb-6">
+        <SuggestionsBox title="Suggestions" suggestions={["Homework Help", "Exam Tips", "Scholarship Info"]} />
+        <SuggestionsBox title="Emergency Contacts" suggestions={["Police - 100", "Ambulance - 102"]} />
+      </div>
 
-      <SuggestionsBox
-        title="Suggestions"
-        suggestions={["New Scholarships", "Career Tips", "Upcoming Govt Exams", "Study Abroad"]}
-      />
-
-      <SuggestionsBox
-        title="Emergency Contacts"
-        suggestions={["Police - 100", "Firefighter - 101", "Ambulance - 102", "Emergency Helpline - 112"]}
-      />
+      {/* Chat UI */}
+      <ChatUI title="ShikshaMitr" accent="text-blue-400" bubble="bg-blue-500" />
     </div>
   );
 }
-
-export default SehaliAI;

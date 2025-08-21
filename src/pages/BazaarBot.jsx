@@ -1,28 +1,35 @@
+// src/pages/BazaarBot.jsx
 import React from "react";
-import ChatInput from "../components/ChatInput";
-import SuggestionsBox from "../components/SuggestionsBox";
-import logo from "../assets/logo.png";
+import ChatUI from "@/components/ChatUI";
+import SuggestionsBox from "@/components/SuggestionsBox";
+import logo from "@/assets/logo.png";
 
-function SehaliAI() {
+export default function BazaarBot() {
   return (
     <div className="page-container text-center">
-      <img src={logo} alt="BazaarBot logo" className="mx-auto w-20 h-20 mb-4" />
+      {/* Header */}
+      <img src={logo} alt="BazaarBot Logo" className="mx-auto w-20 h-20 mb-4" />
       <h1 className="text-2xl font-bold mb-2">BazaarBot</h1>
-      <p className="mb-4">Your farm, your market</p>
+      <p className="mb-4">Helping you shop smarter</p>
 
-      <ChatInput />
+      {/* Suggestions */}
+      <div className="mb-6">
+        <SuggestionsBox 
+          title="Suggestions" 
+          suggestions={["Best Deals", "Nearby Shops", "Price Comparison"]} 
+        />
+        <SuggestionsBox 
+          title="Emergency Contacts" 
+          suggestions={["Consumer Helpline - 1800-11-4000"]} 
+        />
+      </div>
 
-      <SuggestionsBox
-        title="Suggestions"
-        suggestions={["Todays Market Price Tomato", "Todays Market Price Rice", "Todays Market Price Wheat"]}
-      />
-
-      <SuggestionsBox
-        title="Emergency Contacts"
-        suggestions={["Police - 100", "Firefighter - 101", "Ambulance - 102", "Emergency Helpline - 112"]}
+      {/* Chat UI */}
+      <ChatUI 
+        title="BazaarBot" 
+        accent="text-orange-400" 
+        bubble="bg-orange-500" 
       />
     </div>
   );
 }
-
-export default SehaliAI;
