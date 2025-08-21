@@ -1,0 +1,38 @@
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(39, 25, 77); /* your preferred background */
+  color: white;
+}
+
+.form-box {
+  position: relative;
+}
+
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  font-size: 0.85rem;
+  color: gray;
+}
+
+.input-box i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}

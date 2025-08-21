@@ -1,0 +1,59 @@
+/* ✅ Global page styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(39, 25, 77);
+  color: rgb(12, 12, 12);
+}
+
+/* ✅ Logo Styling */
+.circular-logo {
+  width: 80px;   /* smaller size */
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto; /* centers logo */
+  display: block;
+}
+
+.circular-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Page container */
+.page-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ✅ Footer navigation order (Home → Services → About → Login) */
+footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(39, 25, 77);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure correct order */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a:nth-child(1) { order: 1; } /* Home */
+.footer-links a:nth-child(2) { order: 2; } /* Services */
+.footer-links a:nth-child(3) { order: 3; } /* About */
+.footer-links a:nth-child(4) { order: 4; } /* Login */

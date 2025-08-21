@@ -1,0 +1,96 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(39, 25, 77);
+  padding: 20px;
+}
+
+.auth-container {
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+
+.form-section, .info-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-section {
+  background: white;
+}
+
+.info-section {
+  background: rgb(60, 40, 120);
+  color: white;
+  text-align: center;
+}
+
+.auth-container.signup-mode .form-section {
+  background: rgb(60, 40, 120);
+  color: white;
+}
+
+.auth-container.signup-mode .info-section {
+  background: white;
+  color: black;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 300px;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box input, .form-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: rgb(39, 25, 77);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: rgb(60, 40, 120);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.auth-container.signup-mode .btn.outline {
+  border-color: black;
+  color: black;
+}
